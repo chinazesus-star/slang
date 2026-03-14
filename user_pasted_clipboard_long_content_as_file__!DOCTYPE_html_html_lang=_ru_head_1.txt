@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网言网语 2026 — Китайский интернет-сленг | Xiaohongshu Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink-primary: #FFA5B0;
+            --pink-light: #FFD1DC;
+            --pink-neon: #FF2E63;
+            --orange: #FF7F3F;
+            --white: #FFFFFF;
+            --black: #1E1E1E;
+            --gray: #F5F5F5;
+            --shadow: 0 8px 32px rgba(255, 45, 99, 0.15);
+            --shadow-hover: 0 12px 48px rgba(255, 45, 99, 0.25);
+            --mint: #98D8C8;
+            --lavender: #E6E6FA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #FFF5F7 0%, #FFEEF2 50%, #FFF0F3 100%);
+            color: var(--black);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Floating Background Characters */
+        .floating-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .float-char {
+            position: absolute;
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 900;
+            color: rgba(255, 165, 176, 0.08);
+            animation: float 20s infinite ease-in-out;
+            user-select: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 165, 176, 0.2);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--pink-neon);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--pink-primary), var(--orange));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(255, 127, 63, 0.3);
+        }
+
+        .badge-2026 {
+            background: linear-gradient(135deg, var(--pink-neon), var(--orange));
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-left: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--pink-neon), var(--orange));
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(255, 46, 99, 0.3);
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 46, 99, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.6);
+            border: 2px solid var(--pink-primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-family: 'Noto Sans SC', sans-serif;
+            color: var(--pink-neon);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        h1 {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--pink-neon), var(--orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-weight: 500;
+        }
+
+        .hero-slogan {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 1.5rem;
+            color: var(--pink-neon);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transform: rotate(-2deg);
+            margin-top: 1rem;
+        }
+
+        /* Section Styles */
+        section {
+            position: relative;
+            z-index: 1;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .section-title::before,
+        .section-title::after {
+            content: '✨';
+            font-size: 1.5rem;
+        }
+
+        .year-badge {
+            background: linear-gradient(135deg, var(--mint), var(--lavender));
+            color: var(--black);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border: 2px solid var(--black);
+        }
+
+        /* Sticker Cards Grid */
+        .stickers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .sticker-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border: 3px solid transparent;
+        }
+
+        .sticker-card.new-2026 {
+            border-color: var(--mint);
+            background: linear-gradient(135deg, white, #F0FFF4);
+        }
+
+        .sticker-card.new-2026::after {
+            content: '2026';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--pink-neon);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 800;
+        }
+
+        .sticker-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 165, 176, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .sticker-card:hover {
+            transform: translateY(-8px) rotate(1deg);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--pink-primary);
+        }
+
+        .sticker-card:hover::before {
+            opacity: 1;
+        }
+
+        .sticker-emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .sticker-term {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .sticker-pinyin {
+            color: var(--pink-neon);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .sticker-meaning {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px dashed var(--pink-light);
+        }
+
+        .sticker-example {
+            background: var(--gray);
+            padding: 1rem;
+            border-radius: 12px;
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 1.1rem;
+            color: var(--black);
+            position: relative;
+            border-left: 4px solid var(--orange);
+        }
+
+        .sticker-example::before {
+            content: '👉';
+            position: absolute;
+            left: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .sticker-example .translation {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        /* Comments Section */
+        .comments-section {
+            background: white;
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 4rem;
+        }
+
+        .comments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .comment-bubble {
+            background: linear-gradient(135deg, #FFF5F7, #FFEEF2);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .comment-bubble.new-2026 {
+            background: linear-gradient(135deg, #F0FFF4, #E6FFFA);
+            border-color: var(--mint);
+        }
+
+        .comment-bubble:hover {
+            transform: scale(1.05);
+            border-color: var(--pink-primary);
+            box-shadow: 0 8px 24px rgba(255, 165, 176, 0.3);
+        }
+
+        .comment-text {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+
+        .comment-meaning {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Hashtags */
+        .hashtags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+
+        .hashtag {
+            background: white;
+            border: 3px solid var(--pink-light);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            font-family: 'Noto Sans SC', sans-serif;
+            font-weight: 700;
+            color: var(--pink-neon);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .hashtag.new {
+            border-color: var(--mint);
+            background: linear-gradient(135deg, white, #F0FFF4);
+        }
+
+        .hashtag:hover {
+            background: var(--pink-neon);
+            color: white;
+            border-color: var(--pink-neon);
+            transform: translateY(-3px) rotate(-2deg);
+            box-shadow: 0 8px 24px rgba(255, 46, 99, 0.3);
+        }
+
+        .hashtag::before {
+            content: '#';
+            font-weight: 900;
+        }
+
+        /* MBTI Section */
+        .mbti-section {
+            background: linear-gradient(135deg, #E6E6FA, #F0F8FF);
+            border-radius: 30px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border: 3px solid var(--lavender);
+        }
+
+        .mbti-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .mbti-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .mbti-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--pink-primary);
+        }
+
+        .mbti-type {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--pink-neon);
+            margin-bottom: 0.5rem;
+        }
+
+        .mbti-emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Quiz Section */
+        .quiz-container {
+            background: linear-gradient(135deg, white, #FFF5F7);
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            border: 3px solid var(--pink-light);
+        }
+
+        .quiz-question {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 20px;
+            border-left: 5px solid var(--orange);
+        }
+
+        .quiz-question h3 {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .quiz-options {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .quiz-option {
+            padding: 1rem 1.5rem;
+            background: var(--gray);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1rem;
+        }
+
+        .quiz-option:hover {
+            background: var(--pink-light);
+            border-color: var(--pink-primary);
+            transform: translateX(5px);
+        }
+
+        .quiz-option.selected {
+            background: var(--pink-neon);
+            color: white;
+            border-color: var(--pink-neon);
+        }
+
+        .quiz-option.correct {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .quiz-option.wrong {
+            background: #f44336;
+            color: white;
+        }
+
+        .quiz-result {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            margin-top: 2rem;
+            display: none;
+        }
+
+        .quiz-result.show {
+            display: block;
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Random Meme Button */
+        .random-meme-section {
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .meme-display {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            margin-top: 2rem;
+            box-shadow: var(--shadow);
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 3px dashed var(--pink-primary);
+            transition: all 0.3s;
+        }
+
+        .meme-display.active {
+            border-style: solid;
+            background: linear-gradient(135deg, white, #FFF0F3);
+        }
+
+        .meme-term {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--pink-neon);
+            margin-bottom: 1rem;
+        }
+
+        /* Confusing Words Section */
+        .confusing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .compare-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border-top: 5px solid var(--orange);
+        }
+
+        .compare-pair {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: stretch;
+        }
+
+        .compare-item {
+            flex: 1;
+            background: var(--gray);
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .compare-item.different {
+            background: #FFF3E0;
+            border: 2px solid var(--orange);
+        }
+
+        .compare-term {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .vs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--pink-neon);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--pink-primary), var(--orange), var(--pink-neon), var(--mint));
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--pink-primary), var(--orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .footer-slogan {
+            font-family: 'Noto Sans SC', sans-serif;
+            font-size: 1.25rem;
+            color: var(--pink-light);
+            margin-bottom: 2rem;
+        }
+
+        .footer-sticker {
+            font-size: 3rem;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .logo-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 1.2rem;
+            }
+
+            .badge-2026 {
+                display: none;
+            }
+
+            .hero {
+                padding: 4rem 1rem 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero-slogan {
+                font-size: 1.1rem;
+                padding: 0.75rem 1.5rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            .stickers-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .sticker-card {
+                padding: 1.5rem;
+            }
+
+            .sticker-term {
+                font-size: 2rem;
+            }
+
+            .comments-section {
+                padding: 1.5rem;
+            }
+
+            .comments-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .quiz-container {
+                padding: 1.5rem;
+            }
+
+            .mbti-section {
+                padding: 1.5rem;
+            }
+
+            .compare-pair {
+                flex-direction: column;
+            }
+
+            .vs {
+                transform: rotate(90deg);
+                margin: 0.5rem 0;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Sticker Tape Effect */
+        .tape {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            width: 100px;
+            height: 30px;
+            background: rgba(255, 165, 176, 0.6);
+            border-left: 2px dashed rgba(255, 255, 255, 0.3);
+            border-right: 2px dashed rgba(255, 255, 255, 0.3);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        .sticker-card:nth-child(even) .tape {
+            transform: translateX(-50%) rotate(2deg);
+            background: rgba(255, 127, 63, 0.6);
+        }
+
+        .sticker-card.new-2026 .tape {
+            background: rgba(152, 216, 200, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Background -->
+    <div class="floating-bg" id="floatingBg"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">🍠</div>
+                <span>网言网语</span>
+                <span class="badge-2026">2026</span>
+            </a>
+            <button class="btn-primary" onclick="scrollToSection('quiz')">上车</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-badge">🔥 2024-2026 最新流行语</div>
+        <h1>别做小白</h1>
+        <p class="hero-subtitle">
+            Китайский сленг, который реально используют в Xiaohongshu, Douyin и Weibo.<br>
+            От «抽象» до「已老实」— говори как зумер из Шанхая 2026.
+        </p>
+        <div class="hero-slogan">
+            <span>🎯</span>
+            <span>今天你City不City啊？</span>
+        </div>
+    </section>
+
+    <!-- Block 1: 2026 New Words -->
+    <section id="new2026">
+        <h2 class="section-title">
+            <span class="year-badge">2026 新词</span>
+            今年必学
+        </h2>
+        <div class="stickers-grid" id="newStickersGrid"></div>
+    </section>
+
+    <!-- Block 2: Classic Trending Words -->
+    <section id="trending">
+        <h2 class="section-title">爆款词汇</h2>
+        <div class="stickers-grid" id="stickersGrid"></div>
+    </section>
+
+    <!-- Block 3: MBTI Personality Types -->
+    <section id="mbti">
+        <div class="mbti-section">
+            <h2 class="section-title">人格类型 <span style="font-size: 1rem; color: #666;">(2026大热)</span></h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem;">В китайском интернете все делятся на i人 и e人 — это must know!</p>
+            <div class="mbti-grid" id="mbtiGrid"></div>
+        </div>
+    </section>
+
+    <!-- Block 4: Comments -->
+    <section id="comments">
+        <div class="comments-section">
+            <h2 class="section-title">评论区必备</h2>
+            <div class="comments-grid" id="commentsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Block 5: Hashtags -->
+    <section id="hashtags">
+        <h2 class="section-title">热门话题</h2>
+        <div class="hashtags-container" id="hashtagsContainer"></div>
+    </section>
+
+    <!-- Block 6: Confusing Words -->
+    <section id="confusing">
+        <h2 class="section-title">⚠️ 别搞混了</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">Слова, которые новички часто путают</p>
+        <div class="confusing-grid" id="confusingGrid"></div>
+    </section>
+
+    <!-- Random Meme Generator -->
+    <section class="random-meme-section">
+        <h2 class="section-title">随机 meme</h2>
+        <button class="btn-primary" onclick="generateRandomMeme()" style="font-size: 1.2rem; padding: 1rem 2rem;">
+            🎲 抽一个今日热梗
+        </button>
+        <div class="meme-display" id="memeDisplay">
+            <p style="color: #999; font-size: 1.1rem;">Нажми кнопку выше, чтобы получить случайный мем дня!</p>
+        </div>
+    </section>
+
+    <!-- Block 7: Quiz -->
+    <section id="quiz">
+        <div class="quiz-container">
+            <h2 class="section-title">测测你的网感 2026</h2>
+            <div id="quizContent"></div>
+            <div class="quiz-result" id="quizResult">
+                <div class="result-emoji" id="resultEmoji"></div>
+                <h3 id="resultTitle"></h3>
+                <p id="resultText"></p>
+                <button class="btn-primary" onclick="resetQuiz()" style="margin-top: 1rem;">再测一次</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">网瘾汉语 2026</div>
+            <p class="footer-slogan">今天你学废了吗？</p>
+            <div class="footer-sticker">🍠</div>
+            <p style="margin-top: 2rem; opacity: 0.6; font-size: 0.9rem;">
+                Made with 💖 for Chinese learners<br>
+                2026 小红书风格 | 班味清除中...
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Data Arrays
+        
+        // 2026 NEW WORDS
+        const new2026Data = [
+            {
+                term: '班味',
+                pinyin: 'bān wèi',
+                meaning: 'Запах рабочего дня / усталый офисный вид',
+                example: '班味太重了，需要休假',
+                translation: 'Слишком сильно пахнет работой, нужен отпуск',
+                emoji: '👔'
+            },
+            {
+                term: '已老实',
+                pinyin: 'yǐ lǎoshi',
+                meaning: 'Уже сдался / признал поражение (саркастично)',
+                example: '已老实求放过',
+                translation: 'Сдался, пощадите меня',
+                emoji: '🙇'
+            },
+            {
+                term: '偷感',
+                pinyin: 'tōu gǎn',
+                meaning: 'Воровское чувство / стеснение быть в центре внимания',
+                example: '偷感很重，不敢拍照',
+                translation: 'Очень стесняюсь, боюсь фоткаться',
+                emoji: '🥷'
+            },
+            {
+                term: '脆皮',
+                pinyin: 'cuì pí',
+                meaning: 'Хрупкий (внешне сильный, внутри сломленный)',
+                example: '脆皮打工人',
+                translation: 'Хрупкий работник (выглядит норм, но вот-вот сломается)',
+                emoji: '😵'
+            },
+            {
+                term: '水灵灵',
+                pinyin: 'shuǐ líng líng',
+                meaning: 'Сочный / свежий / молодой (популярное описание)',
+                example: '水灵灵的大学生',
+                translation: 'Свежий как огурчик студент',
+                emoji: '💧'
+            },
+            {
+                term: '主理人',
+                pinyin: 'zhǔ lǐ rén',
+                meaning: 'Chief curator / директор своего lifestyle',
+                example: '这家咖啡店的主理人很帅',
+                translation: 'Директор этой кофейни очень красивый',
+                emoji: '👤'
+            }
+        ];
+
+        // CLASSIC 2024-2025 WORDS
+        const stickersData = [
+            {
+                term: '绝了',
+                pinyin: 'jué le',
+                meaning: 'Пипец как круто / жесть / невероятно',
+                example: '这家店绝了！',
+                translation: 'Этот магазин просто бомба!',
+                emoji: '🤯'
+            },
+            {
+                term: '笑死',
+                pinyin: 'xiào sǐ',
+                meaning: 'Умереть со смеху (XSWL)',
+                example: '这个视频笑死我了',
+                translation: 'Это видео меня убило со смеху',
+                emoji: '😂'
+            },
+            {
+                term: '破防了',
+                pinyin: 'pò fáng le',
+                meaning: 'Пробило на эмоции / сломалась защита',
+                example: '这段话真的破防了',
+                translation: 'Этот пост реально пробил на слезу',
+                emoji: '😭'
+            },
+            {
+                term: 'YYDS',
+                pinyin: 'yǒng yuǎn de shén',
+                meaning: 'Легенда / Бог навсегда / GOAT',
+                example: '这家奶茶YYDS！',
+                translation: 'Этот молочный чай — легенда!',
+                emoji: '👑'
+            },
+            {
+                term: '集美们',
+                pinyin: 'jí měi men',
+                meaning: 'Девчонки (от 姐妹们, искажённо)',
+                example: '集美们冲鸭！',
+                translation: 'Девчонки, погнали!',
+                emoji: '💅'
+            },
+            {
+                term: '我酸了',
+                pinyin: 'wǒ suān le',
+                meaning: 'Я завидую / мне кисло /柠檬精',
+                example: '看到她的包包，我酸了',
+                translation: 'Увидела её сумку — аж кисло стало',
+                emoji: '🍋'
+            },
+            {
+                term: '躺平',
+                pinyin: 'tǎng píng',
+                meaning: 'Лечь и не париться / пофигизм',
+                example: '不想上班，只想躺平',
+                translation: 'Не хочу работать, хочу лежать',
+                emoji: '🛌'
+            },
+            {
+                term: '社死',
+                pinyin: 'shè sǐ',
+                meaning: 'Социальная смерть / жёсткий позор',
+                example: '昨天的事让我社死了',
+                translation: 'Вчерашнее — полный позор перед людьми',
+                emoji: '💀'
+            },
+            {
+                term: '抽象',
+                pinyin: 'chōu xiàng',
+                meaning: 'Абсурд / сюр / необъяснимая хрень (2024 хит)',
+                example: '你搞什么抽象？',
+                translation: 'Что за бред ты несёшь?',
+                emoji: '🎭'
+            },
+            {
+                term: '包的',
+                pinyin: 'bāo de',
+                meaning: 'Точно / стопудово / гарантия (2024-2025)',
+                example: '这杯奶茶包好喝的！',
+                translation: 'Этот чай стопудово вкусный!',
+                emoji: '📦'
+            },
+            {
+                term: '那咋了',
+                pinyin: 'nà zǎ le',
+                meaning: 'И чё? / А какая разница? (философия пофигизма)',
+                example: '没化妆出门，那咋了？',
+                translation: 'Вышла без макияжа — и чё?',
+                emoji: '🤷'
+            },
+            {
+                term: 'City不City',
+                pinyin: 'City bù City',
+                meaning: 'Модно/распиарено или нет',
+                example: '这样拍照好City啊！',
+                translation: 'Так фоткаться — это так модно!',
+                emoji: '🌆'
+            }
+        ];
+
+        // MBTI Data
+        const mbtiData = [
+            {
+                type: 'i人',
+                pinyin: 'i rén',
+                meaning: 'Интроверт (内向的人)',
+                desc: 'Заряжается энергией в одиночестве, боится социальных взаимодействий, любит дома',
+                emoji: '🏠'
+            },
+            {
+                type: 'e人',
+                pinyin: 'e rén',
+                meaning: 'Экстраверт (外向的人)',
+                desc: 'Заряжается от общения, обожает тусовки, говорит первым',
+                emoji: '🎉'
+            },
+            {
+                type: '浓人',
+                pinyin: 'nóng rén',
+                meaning: 'Яркий человек (новое 2026)',
+                desc: 'Активный, эмоциональный, любит быть в центре внимания',
+                emoji: '🌟'
+            },
+            {
+                type: '淡人',
+                pinyin: 'dàn rén',
+                meaning: 'Тусклый человек (новое 2026)',
+                desc: 'Спокойный, флегматичный, "всё норм", ничего не хочет',
+                emoji: '🍵'
+            }
+        ];
+
+        const commentsData = [
+            { text: '哈哈哈', pinyin: 'hāhāhā', meaning: 'Ржака (чем больше 哈, тем смешнее)', new2026: false },
+            { text: '学到了', pinyin: 'xué dào le', meaning: 'Заценил, понял, запомнил', new2026: false },
+            { text: '谢谢分享', pinyin: 'xièxiè fēnxiǎng', meaning: 'Спасибо за пост', new2026: false },
+            { text: '已收藏', pinyin: 'yǐ shōucáng', meaning: 'Сохранил в закладки', new2026: false },
+            { text: '狠狠同意', pinyin: 'hěn hěn tóngyì', meaning: 'Жёстко согласен', new2026: false },
+            { text: '谁懂啊', pinyin: 'shéi dǒng a', meaning: 'Кто поймёт? (мемное нытьё)', new2026: false },
+            { text: '666', pinyin: 'liù liù liù', meaning: 'Круто / огонь (из гейминга)', new2026: false },
+            { text: '栓Q', pinyin: 'shuān Q', meaning: 'Thank you (иронично/саркастично)', new2026: false },
+            { text: '因为他善', pinyin: 'yīnwèi tā shàn', meaning: 'Потому что он добрый (бессмысленное объяснение)', new2026: true },
+            { text: '嘴替', pinyin: 'zuǐ tì', meaning: 'Замена рта (выразил мои мысли)', new2026: true }
+        ];
+
+        const hashtagsData = [
+            { tag: '学习汉语', new: false },
+            { tag: '中文好难', new: false },
+            { tag: '沙雕网友', new: false },
+            { tag: '中国生活', new: false },
+            { tag: '汉语桥', new: false },
+            { tag: '抽象文学', new: false },
+            { tag: 'City不City', new: false },
+            { tag: '早C晚A', new: false },
+            { tag: '发疯日常', new: false },
+            { tag: '躺平生活', new: false },
+            { tag: '班味清除', new: true },
+            { tag: '偷感很重', new: true },
+            { tag: '脆皮大学生', new: true },
+            { tag: '水灵灵', new: true },
+            { tag: '已老实', new: true }
+        ];
+
+        const confusingData = [
+            {
+                pair1: { term: '上头', pinyin: 'shàngtóu', meaning: 'Залип, кайфую, не могу остановиться' },
+                pair2: { term: '下头', pinyin: 'xiàtóu', meaning: 'Облом, разочаровался, испортилось настроение' },
+                note: 'Антонимы: 上头 = кайф, 下头 = облом'
+            },
+            {
+                pair1: { term: '社死', pinyin: 'shè sǐ', meaning: 'Социальный позор перед людьми' },
+                pair2: { term: '笑死', pinyin: 'xiào sǐ', meaning: 'Умер со смеху (не буквально!)' },
+                note: 'Оба "смерть", но одно стыдно, другое смешно'
+            },
+            {
+                pair1: { term: '绝绝子', pinyin: 'jué jué zi', meaning: 'Невероятно / топчик (старое, сейчас не используется)' },
+                pair2: { term: '绝了', pinyin: 'jué le', meaning: 'Жесть / круто / невозможно (актуально)' },
+                note: 'Не путай! 绝绝子 устарело и считается кринжем'
+            },
+            {
+                pair1: { term: '班味', pinyin: 'bān wèi', meaning: 'Запах работы, усталость от офиса (2026)' },
+                pair2: { term: '松弛感', pinyin: 'sōngchí gǎn', meaning: 'Ощущение расслабленности, чилла (2024)' },
+                note: '班味 = плохо (усталость), 松弛感 = хорошо (релакс)'
+            }
+        ];
+
+        const quizQuestions = [
+            {
+                question: 'Что значит「班味」(bān wèi)?',
+                options: [
+                    'Вкус банана',
+                    'Запах рабочего дня / усталость от офиса',
+                    'Номер рабочего места',
+                    'Вкусный обед'
+                ],
+                correct: 1,
+                explanation: '班味 = "запах рабочего дня", описание усталого вида офисного работника. Популярно в 2026!'
+            },
+            {
+                question: 'Как сказать "я сдался" по-сленговому 2026 года?',
+                options: [
+                    '我放弃了',
+                    '已老实',
+                    '我输了',
+                    '结束了'
+                ],
+                correct: 1,
+                explanation: '已老实 (yǐ lǎoshi) = "уже сдался/признал поражение", часто используется саркастично.'
+            },
+            {
+                question: 'Что такое「偷感」(tōu gǎn)?',
+                options: [
+                    'Чувство вора',
+                    'Стеснение быть в центре внимания, "воровское" поведение интроверта',
+                    'Вкус украденной еды',
+                    'Плохое предчувствие'
+                ],
+                correct: 1,
+                explanation: '偷感 = "воровское чувство", когда стесняешься фоткаться, избегаешь взглядов, чувствуешь себя "не на месте".'
+            },
+            {
+                question: 'i人 и e人 — это:',
+                options: [
+                    'Иностранцы и эмигранты',
+                    'Интроверты и экстраверты по MBTI',
+                    'Работники и боссы',
+                    'Богатые и бедные'
+                ],
+                correct: 1,
+                explanation: 'i人 = интроверт (内向), e人 = экстраверт (外向). Must know для китайского интернета 2026!'
+            }
+        ];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createFloatingChars();
+            renderNew2026();
+            renderStickers();
+            renderMBTI();
+            renderComments();
+            renderHashtags();
+            renderConfusing();
+            renderQuiz();
+            setupScrollAnimation();
+        });
+
+        // Floating Background Characters
+        function createFloatingChars() {
+            const chars = ['绝了', '笑死', '破防', 'YYDS', '集美', '躺平', '社死', '抽象', '包的', '已老实', '班味', '偷感'];
+            const container = document.getElementById('floatingBg');
+            
+            for (let i = 0; i < 15; i++) {
+                const div = document.createElement('div');
+                div.className = 'float-char';
+                div.textContent = chars[Math.floor(Math.random() * chars.length)];
+                div.style.left = Math.random() * 100 + '%';
+                div.style.top = Math.random() * 100 + '%';
+                div.style.fontSize = (Math.random() * 3 + 2) + 'rem';
+                div.style.animationDelay = Math.random() * 20 + 's';
+                div.style.animationDuration = (15 + Math.random() * 10) + 's';
+                container.appendChild(div);
+            }
+        }
+
+        // Render 2026 New Words
+        function renderNew2026() {
+            const grid = document.getElementById('newStickersGrid');
+            new2026Data.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'sticker-card new-2026 fade-in';
+                card.style.animationDelay = index * 0.1 + 's';
+                card.innerHTML = `
+                    <div class="tape"></div>
+                    <span class="sticker-emoji">${item.emoji}</span>
+                    <div class="sticker-term">${item.term}</div>
+                    <div class="sticker-pinyin">${item.pinyin}</div>
+                    <div class="sticker-meaning">${item.meaning}</div>
+                    <div class="sticker-example">
+                        ${item.example}
+                        <span class="translation">${item.translation}</span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Render Classic Stickers
+        function renderStickers() {
+            const grid = document.getElementById('stickersGrid');
+            stickersData.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'sticker-card fade-in';
+                card.style.animationDelay = index * 0.1 + 's';
+                card.innerHTML = `
+                    <div class="tape"></div>
+                    <span class="sticker-emoji">${item.emoji}</span>
+                    <div class="sticker-term">${item.term}</div>
+                    <div class="sticker-pinyin">${item.pinyin}</div>
+                    <div class="sticker-meaning">${item.meaning}</div>
+                    <div class="sticker-example">
+                        ${item.example}
+                        <span class="translation">${item.translation}</span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Render MBTI
+        function renderMBTI() {
+            const grid = document.getElementById('mbtiGrid');
+            mbtiData.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'mbti-card fade-in';
+                card.style.animationDelay = index * 0.1 + 's';
+                card.innerHTML = `
+                    <div class="mbti-emoji">${item.emoji}</div>
+                    <div class="mbti-type">${item.type}</div>
+                    <div style="color: var(--pink-neon); font-weight: 600; margin-bottom: 0.5rem;">${item.pinyin}</div>
+                    <div style="font-weight: 700; margin-bottom: 0.5rem;">${item.meaning}</div>
+                    <div style="font-size: 0.9rem; color: #666;">${item.desc}</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Render Comments
+        function renderComments() {
+            const grid = document.getElementById('commentsGrid');
+            commentsData.forEach(item => {
+                const bubble = document.createElement('div');
+                bubble.className = `comment-bubble fade-in ${item.new2026 ? 'new-2026' : ''}`;
+                bubble.innerHTML = `
+                    <div class="comment-text">${item.text}</div>
+                    <div style="color: var(--pink-neon); font-size: 0.9rem; margin-bottom: 0.5rem;">${item.pinyin}</div>
+                    <div class="comment-meaning">${item.meaning}</div>
+                    ${item.new2026 ? '<span style="position: absolute; top: 5px; right: 5px; background: var(--mint); padding: 2px 6px; border-radius: 5px; font-size: 0.6rem;">2026</span>' : ''}
+                `;
+                bubble.onclick = () => {
+                    bubble.style.transform = 'scale(0.95)';
+                    setTimeout(() => bubble.style.transform = 'scale(1.05)', 100);
+                };
+                grid.appendChild(bubble);
+            });
+        }
+
+        // Render Hashtags
+        function renderHashtags() {
+            const container = document.getElementById('hashtagsContainer');
+            hashtagsData.forEach(item => {
+                const a = document.createElement('a');
+                a.className = `hashtag fade-in ${item.new ? 'new' : ''}`;
+                a.href = '#';
+                a.textContent = item.tag;
+                a.onclick = (e) => {
+                    e.preventDefault();
+                    a.style.transform = 'scale(1.1) rotate(0deg)';
+                    setTimeout(() => {
+                        a.style.transform = '';
+                    }, 200);
+                };
+                container.appendChild(a);
+            });
+        }
+
+        // Render Confusing Words
+        function renderConfusing() {
+            const grid = document.getElementById('confusingGrid');
+            confusingData.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'compare-card fade-in';
+                card.innerHTML = `
+                    <div class="compare-pair">
+                        <div class="compare-item different">
+                            <div class="compare-term">${item.pair1.term}</div>
+                            <div style="color: var(--pink-neon); font-size: 0.9rem; margin: 0.5rem 0;">${item.pair1.pinyin}</div>
+                            <div style="font-size: 0.85rem; color: #666;">${item.pair1.meaning}</div>
+                        </div>
+                        <div class="vs">VS</div>
+                        <div class="compare-item">
+                            <div class="compare-term">${item.pair2.term}</div>
+                            <div style="color: var(--pink-neon); font-size: 0.9rem; margin: 0.5rem 0;">${item.pair2.pinyin}</div>
+                            <div style="font-size: 0.85rem; color: #666;">${item.pair2.meaning}</div>
+                        </div>
+                    </div>
+                    <div style="background: var(--pink-light); padding: 1rem; border-radius: 10px; font-size: 0.9rem; color: var(--black); border-left: 3px solid var(--pink-neon);">
+                        💡 ${item.note}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Quiz Logic
+        let currentQuestion = 0;
+        let score = 0;
+        let answers = [];
+
+        function renderQuiz() {
+            const container = document.getElementById('quizContent');
+            container.innerHTML = '';
+            
+            quizQuestions.forEach((q, idx) => {
+                const qDiv = document.createElement('div');
+                qDiv.className = 'quiz-question';
+                qDiv.style.display = idx === 0 ? 'block' : 'none';
+                qDiv.id = `question-${idx}`;
+                
+                let optionsHtml = '';
+                q.options.forEach((opt, optIdx) => {
+                    optionsHtml += `
+                        <div class="quiz-option" onclick="selectOption(${idx}, ${optIdx}, this)">
+                            ${opt}
+                        </div>
+                    `;
+                });
+                
+                qDiv.innerHTML = `
+                    <h3>Вопрос ${idx + 1}/${quizQuestions.length}: ${q.question}</h3>
+                    <div class="quiz-options">${optionsHtml}</div>
+                    <div id="explanation-${idx}" style="display: none; margin-top: 1rem; padding: 1rem; background: #FFF3E0; border-radius: 10px; color: #666; font-size: 0.95rem;"></div>
+                    ${idx < quizQuestions.length - 1 ? 
+                        `<button class="btn-primary" id="next-${idx}" style="margin-top: 1rem; display: none;" onclick="nextQuestion(${idx})">下一题 →</button>` :
+                        `<button class="btn-primary" id="finish-${idx}" style="margin-top: 1rem; display: none;" onclick="finishQuiz()">查看结果</button>`
+                    }
+                `;
+                container.appendChild(qDiv);
+            });
+        }
+
+        function selectOption(qIdx, optIdx, element) {
+            const question = quizQuestions[qIdx];
+            const options = element.parentElement.querySelectorAll('.quiz-option');
+            const explanation = document.getElementById(`explanation-${qIdx}`);
+            const nextBtn = document.getElementById(`next-${qIdx}`) || document.getElementById(`finish-${qIdx}`);
+            
+            options.forEach(opt => opt.classList.remove('selected', 'correct', 'wrong'));
+            options.forEach(opt => opt.style.pointerEvents = 'none');
+            
+            if (optIdx === question.correct) {
+                element.classList.add('correct');
+                score++;
+                explanation.innerHTML = `✅ Правильно! ${question.explanation}`;
+            } else {
+                element.classList.add('wrong');
+                options[question.correct].classList.add('correct');
+                explanation.innerHTML = `❌ Неправильно. ${question.explanation}`;
+            }
+            
+            explanation.style.display = 'block';
+            nextBtn.style.display = 'inline-block';
+            answers.push(optIdx === question.correct);
+        }
+
+        function nextQuestion(idx) {
+            document.getElementById(`question-${idx}`).style.display = 'none';
+            document.getElementById(`question-${idx + 1}`).style.display = 'block';
+            currentQuestion++;
+        }
+
+        function finishQuiz() {
+            const resultDiv = document.getElementById('quizResult');
+            const emoji = document.getElementById('resultEmoji');
+            const title = document.getElementById('resultTitle');
+            const text = document.getElementById('resultText');
+            
+            document.getElementById(`question-${quizQuestions.length - 1}`).style.display = 'none';
+            
+            if (score === quizQuestions.length) {
+                emoji.textContent = '🏆';
+                title.textContent = '真网感大师！';
+                text.textContent = `Ты настоящий гуру китайского интернета 2026! ${score}/${quizQuestions.length} правильно. Можешь смело открывать Xiaohongshu и комментить!`;
+            } else if (score >= quizQuestions.length / 2) {
+                emoji.textContent = '🌟';
+                title.textContent = '半熟网人';
+                text.textContent = `Ты в теме, но есть куда расти. ${score}/${quizQuestions.length} правильно. Продолжай залипать в китайский тикток!`;
+            } else {
+                emoji.textContent = '📚';
+                title.textContent = '小白加油';
+                text.textContent = `Ты пока новичок, но ничего страшного! ${score}/${quizQuestions.length} правильно. Перечитай карточки с「已老实」и「班味」и возвращайся!`;
+            }
+            
+            resultDiv.classList.add('show');
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            answers = [];
+            document.getElementById('quizResult').classList.remove('show');
+            renderQuiz();
+        }
+
+        // Random Meme Generator (All words combined)
+        const allWords = [...new2026Data, ...stickersData];
+        
+        function generateRandomMeme() {
+            const display = document.getElementById('memeDisplay');
+            const random = allWords[Math.floor(Math.random() * allWords.length)];
+            
+            display.classList.add('active');
+            display.innerHTML = `
+                <div class="meme-term">${random.term}</div>
+                <div style="color: var(--pink-neon); font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">${random.pinyin}</div>
+                <div style="font-size: 1.1rem; color: #555; margin-bottom: 1rem;">${random.meaning}</div>
+                <div style="background: var(--gray); padding: 1rem 1.5rem; border-radius: 15px; font-family: 'Noto Sans SC', sans-serif; font-size: 1.3rem; border-left: 4px solid var(--orange);">
+                    ${random.example}
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #888; margin-top: 0.5rem; font-style: italic;">${random.translation}</div>
+                </div>
+                <div style="margin-top: 1rem; font-size: 3rem;">${random.emoji}</div>
+            `;
+            
+            display.style.transform = 'scale(0.9)';
+            setTimeout(() => display.style.transform = 'scale(1)', 100);
+        }
+
+        // Scroll Animation Observer
+        function setupScrollAnimation() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        }
+
+        // Smooth Scroll
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Add click interactions to sticker cards
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.sticker-card')) {
+                const card = e.target.closest('.sticker-card');
+                card.style.transform = 'scale(0.95) rotate(0deg)';
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 150);
+            }
+        });
+    </script>
+</body>
+</html>
